@@ -37,13 +37,13 @@
 {
   //Disable the button so they can't press it
   self.peelIt.enabled = NO;
-  
+
   [self.textHere resignFirstResponder];
-  
+
   //Create a new UIView
   UIView *imgView = [[UIView alloc] init];
-  [self.view addSubview:imgView];  
-  
+  [self.view addSubview:imgView];
+
   //This is where you would do everything to clear your interface
   self.textHere.text = @""; //Set the text field to blank
 
@@ -61,9 +61,9 @@
   {
     effectToUse = UIViewAnimationOptionTransitionCurlDown;
   }
-  
-  
-  [UIView transitionWithView:self.view 
+
+
+  [UIView transitionWithView:self.view
                     duration:1
                      options:effectToUse
                   animations:^{
@@ -76,7 +76,7 @@
                     self.peelIt.enabled = YES; //Don't forget to re-enable the button at the completion block handler
                   }
    ];
-  
+
 }
 
 @end
